@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AWS Capstone 1 Web App</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(135deg, #131a22, #243b55);
+            color: #ffffff;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 700px;
+            padding: 45px;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 18px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
+        }
+
+        h1 {
+            margin-bottom: 15px;
+            color: #ff9900;
+        }
+
+        p {
+            line-height: 1.7;
+            font-size: 18px;
+        }
+
+        .services {
+            margin-top: 30px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+
+        .service {
+            padding: 16px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+        }
+
+        .status {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 10px 18px;
+            background: #1f9d55;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+
+        @media (max-width: 600px) {
+            .services {
+                grid-template-columns: 1fr;
+            }
+
+            .container {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main class="container">
+        <h1>AWS Capstone Project</h1>
+
+        <p>
+            This web application is running inside an Nginx Docker container
+            deployed to Amazon ECS using AWS Fargate.
+        </p>
+
+        <section class="services">
+            <div class="service">Amazon ECR</div>
+            <div class="service">Amazon ECS</div>
+            <div class="service">AWS Fargate</div>
+            <div class="service">CloudFormation</div>
+        </section>
+
+        <div class="status">Application Running Successfully</div>
+    </main>
+</body>
+</html>
